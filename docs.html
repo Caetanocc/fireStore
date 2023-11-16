@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Firebase Storage App</title>
-  <link rel="stylesheet" href="css/estilo.css">
-
+  <link rel="stylesheet" href="css/novo-estilo.css">
 </head>
 <body>
 
-    <h1>Bem-vindo </h1>
+  <div class="container">
+    <h1 class="text-center mt-4">Bem-vindo</h1>
 
-    <div id="dadosUser"> </div>
+    <div id="dadosUser" class="text-center mt-3"></div>
     
-    <a href="index.html">Logout</a>  
-  
-    <h1>Enviar Arquivo</h1>
+    <button id="Sair" class="btn btn-danger mt-3">Sair</button> 
 
-    <form id="fileForm">
-        <input type="file" id="fileInput">
-        <button type="button" onclick="uploadFile()">Enviar</button>
+    <h2 class="mt-5">Enviar Arquivo</h2>
+
+    <form id="fileForm" class="mt-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="fileInput" onchange="displaySelectedFile()">
+          <label class="custom-file-label" for="fileInput">Escolher arquivo</label>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" onclick="uploadFile()">Enviar</button>
     </form>
 
-     <div id="fileList"></div>
+    <div id="selectedFile" class="mt-3"></div>
+
+    <h2 class="mt-5">Lista de Arquivos</h2>
+    <div id="fileList" class="row mt-3"></div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
   <script src="js/fbconfig.js" ></script> 
   <script src="js/app.js"></script>
 </body>
 </html>
-

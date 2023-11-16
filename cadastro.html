@@ -1,0 +1,45 @@
+<!-- cadastro.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Cadastro</title>
+  <!-- Adicione o link para o arquivo CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Adicione seu próprio arquivo de estilo após o Bootstrap -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="gradient-bg">
+
+  <div class="container mt-5">
+    <div class="cadastro-container col-md-6 offset-md-3">
+      <h1 class="text-center">Cadastrar</h1>
+
+      <form id="cadastroForm">
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" class="form-control" id="senha" name="senha" required>
+        </div>
+
+        <button type="button" class="btn btn-primary login-button" onclick="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-danger google-login-button" onclick="loginWithGoogle()">Login Google</button>
+        <a href="index.html" class="d-block mt-3">Login</a>
+      </form>
+    </div>
+  </div>
+
+  <!-- Adicione os scripts do Bootstrap e Firebase no final do corpo -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+  <script src="js/fbconfig.js"></script> 
+  <script src="js/login.js"></script>
+</body>
+</html>

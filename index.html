@@ -1,32 +1,44 @@
-
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Firebase Login</title>
+  <!-- Adicione o link para o arquivo CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Adicione seu próprio arquivo de estilo após o Bootstrap -->
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="gradient-bg">
 
-  <div class="login-container">
-    <h1>Carregar Arquivos</h1>
+  <div class="container mt-5">
+    <div class="login-container col-md-6 offset-md-3">
+      <h1 class="text-center">Login</h1>
 
-    <form id="loginForm">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
 
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" required>
+        <div class="form-group">
+          <label for="password">Senha:</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
 
-      <button type="button" class="login-button" onclick="loginWithEmail()">Login Email/Senha</button>
-      <button type="button" class="google-login-button" onclick="loginWithGoogle()"> Login Google</button>
-    </form>
+        <button type="button" class="btn btn-primary login-button" onclick="loginWithEmail()">Login Email</button>
+        <button type="button" class="btn btn-danger google-login-button" onclick="loginWithGoogle()">Login Google</button>
+        <a href="cadastro.html" class="d-block mt-3">Cadastrar</a>
+      </form>
+    </div>
   </div>
 
+  <!-- Adicione os scripts do Bootstrap e Firebase no final do corpo -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
-  <script src="js/fbconfig.js" ></script> 
+  <script src="js/fbconfig.js"></script> 
   <script src="js/login.js"></script>
 </body>
 </html>

@@ -1,108 +1,71 @@
-/* style.css */
+/* estilo.css */
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .login-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-  }
-  
-  form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-.login-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #00c6fb, #005bea, #00c6fb, #005bea);
+  animation: gradientAnimation 10s infinite alternate;
+}
+
+.login-container,
+.cadastro-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Adiciona margem automática para centralização */
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .google-login-button {
-    background-color: #4285f4;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
 }
-  
-.google-login-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
 }
-  
-  /* Adicione as seguintes regras no arquivo style.css */
 
-/* Adicionar um estilo flexível para o contêiner de arquivos */
-#fileList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
   }
-  
-  .file-container {
-    margin: 10px;
-    text-align: center;
-    flex: 1 1 calc(33.33% - 20px); /* Adiciona flexibilidade para dispositivos móveis */
-    max-width: calc(33.33% - 20px); /* Evita que o contêiner seja muito largo em dispositivos móveis */
+  100% {
+    background-position: 0 0;
   }
-
- .file-container img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
- .file-container a {
-    display: block;
-    padding: 10px;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    color: #333;
-    border-radius: 4px;
-  }
-  
-  .file-container a:hover {
-    background-color: #ddd;
-  }
-  
-  .file-image {
-    width: 100%; /* Para garantir que a imagem ocupe 100% da largura do contêiner */
-    height: auto; /* Para manter a proporção da imagem */
-    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura máxima do contêiner */
-  }
-    
-
-
-  
+}
