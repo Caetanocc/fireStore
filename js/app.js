@@ -160,3 +160,15 @@ function removeFile(userId, fileName) {
 // Chamar a função de exibição ao carregar a página
 document.addEventListener('DOMContentLoaded', displayFiles);
 
+document.addEventListener('DOMContentLoaded', function () {
+  const logoutButton = document.getElementById('Sair');
+
+  logoutButton.addEventListener('click', () => {
+      firebase.auth().signOut().then(() => {
+       window.location.href = 'index.html';
+       })
+      .catch((error) => {
+      console.error('Erro ao encerrar a sessão: ', error);
+  });
+});
+});

@@ -1,0 +1,85 @@
+/* css/novo-estilo.css */
+
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  .mt-5 {
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  .custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + .75rem);
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  }
+  
+  /* Adicione estilos para a lista de arquivos */
+  #fileList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .file-item {
+    width: 48%; /* Define a largura para duas imagens por fileira ocupando 48% cada para dar espaço entre elas */
+    margin-bottom: 10px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse a .file-item */
+  }
+  
+  .file-item img {
+    width: 100%; /* Faz com que a imagem preencha a .file-item */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
